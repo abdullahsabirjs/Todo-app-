@@ -1,85 +1,105 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: orange;
-    color: #080000; /* Dark text for readability */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    text-align: center; /* Centering content */
+    background-image: linear-gradient(to right top, #a8edea, #fed6e3);
 }
 
-#app {
-    background: white;
-    margin: 2rem auto;
-    padding: 2rem;
-    width: 60%;
-    max-width: 700px;
-    border-radius: 8px;
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Other existing CSS styles... */
+/* 
+.main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+} */
 
-input[type="text"], button {
-    /* padding: 10px;
-    margin: 5px; */
-    width: 50px;
-    height: 30px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
+/* Styling for input and buttons */
 input[type="text"] {
-    width: calc(100% - 22px); /* Full-width input field */
-    box-sizing: border-box; /* Include padding and border in element's width */
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]::placeholder {
+    color: #b0b0b0;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 15px;
     border: none;
+    background-color: #5dade2;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px); /* Slight raise effect on hover */
+    background-color: #3498db;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+/* Todo list styles */
+#todoList {
+    list-style: none;
+    padding: 0;
 }
 
-.todo-item {
-    background-color: #d8b2b2;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 15px;
-    position: relative;
-    transition: background-color 0.3s;
+#todoList li {
+    background: #ecf0f1;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.todo-item:hover {
-    background-color: #f9f9f9; /* Slight background change on hover */
+#todoList li .editInput {
+    margin-right: 10px;
+    flex-grow: 1;
 }
 
-.editMode {
-    display: none;
+.editData, .saveData, .delData {
+    margin-left: 5px;
+}
+/* Header styles */
+.header-title {
+    text-align: center;
+    color: #5dade2;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
-.todo-item button {
-    float: right; /* Align buttons to the right */
-    margin-left: 10px;
+/* Footer styles */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5dade2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
 }
 
-/* Responsive styling */
-@media screen and (max-width: 600px) {
-    #app {
-        width: 90%;
-        margin-top: 1rem;
-        padding: 1rem;
-    }
-
-    input[type="text"], button {
-        width: 100%;
-        margin-top: 10px;
-    }
+/* Adjusting the main content area */
+.main {
+    margin-top: 40px;
+    margin-bottom: 60px; /* Space for footer */
+    /* ... existing styles ... */
 }

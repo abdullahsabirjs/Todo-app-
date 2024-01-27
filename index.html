@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>ADDI-TODO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>TODO APP</h1>
-    <div id="app">
-        <input type="text" id="newTodo" placeholder="Add a new todo...">
-        <button onclick="addTodo()">Add Todo</button>
-        <button onclick="deleteAllTodos()">Delete All Todos</button>
-        <ul id="todoList"></ul>
-    </div>
+    <h1 class="header-title">ADDI TODO</h1>
 
-    <script src="script.js"></script>
+    <div class="content-container">
+        <div class="main">
+            <input type="text" id="todoInput" placeholder="Enter your todo here">
+            <button id="addData">Add Todo</button>
+            <div class="second">
+                <ul id="todoList"></ul>
+            </div>
+        </div>
+        <footer class="footer">
+            Developed by Abdullah
+        </footer>
+    </div>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
